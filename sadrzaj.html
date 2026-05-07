@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vozni park | Elite Rent A Car</title>
+    <link rel="stylesheet" href="css/tptpstil.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-box">
+                <img src="images/Screenshot 2026-05-05 180257.png" alt="Elite Rent A Car Logo">
+                <h1>Elite Rent A Car</h1>
+            </div>
+            <nav id="glavni-meni">
+                <ul class="nav-lista">
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="sadrzaj.html" class="active">Vozni park</a></li>
+                    <li><a href="#pravila-sekcija">Pravila korištenja</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="https://github.com/FarisSoftic11/Grupa35-TPTP-2026" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="katalog-sekcija">
+            <h2 class="centriran-naslov">Naša Ekskluzivna Ponuda</h2>
+            
+            <div class="filter-kontrole">
+                <button type="button" id="btn-ekonomska">Ekonomska</button>
+                <button type="button" id="btn-srednja">Srednja klasa</button>
+                <button type="button" id="btn-luksuzna">Luksuzna</button>
+                <button type="button" id="id-sve">Prikaži sve</button>
+            </div>
+
+            <div class="vozila-lista">
+                
+                <h3 class="kategorija-naslov">Ekonomska Klasa</h3>
+
+                <article class="car-card ekonomska">
+                    <h4>Toyota Corolla Hybrid</h4>
+                    <div class="car-image">
+                        <img src="https://di-uploads-pod44.dealerinspire.com/nyetoyota/uploads/2023/02/2023_toyota_corolla-hybrid_f34_fd_10182245_1600-1-1440x959.jpg" alt="Toyota Corolla">
+                    </div>
+                    <div class="car-info">
+                        <ul>
+                            <li><strong>Konjaža:</strong> 140 KS | <strong>Godište:</strong> 2023.</li>
+                            <li><strong>Oprema:</strong> Automatik, Parking senzori, Klima</li>
+                        </ul>
+                        <p class="cijena">80 KM / dan</p>
+                    </div>
+                </article>
+
+                <article class="car-card ekonomska">
+                    <h4>VW Golf 7 TDI</h4>
+                    <div class="car-image">
+                        <img src="https://www.carlander.ba/wp-content/uploads/2019/09/Test-Specijal-Golf-7-2.0-tdi-dsg-r-line-2019-03.jpg" alt="VW Golf 7">
+                    </div>
+                    <div class="car-info">
+                        <ul>
+                            <li><strong>Konjaža:</strong> 115 KS | <strong>Godište:</strong> 2018.</li>
+                            <li><strong>Oprema:</strong> Manuelni mjenjač, Navigacija</li>
+                        </ul>
+                        <p class="cijena">70 KM / dan</p>
+                    </div>
+                </article>
+
+                <article class="car-card ekonomska">
+                    <h4>Suzuki Swift Sport</h4>
+                    <div class="car-image">
+                        <img src="https://c4.wallpaperflare.com/wallpaper/63/546/349/suzuki-cars-swift-hd-wallpaper-preview.jpg" alt="Suzuki Swift">
+                    </div>
+                    <div class="car-info">
+                        <ul>
+                            <li><strong>Konjaža:</strong> 129 KS | <strong>Godište:</strong> 2021.</li>
+                            <li><strong>Oprema:</strong> LED svjetla, Tempomat, Grijanje sjedišta</li>
+                        </ul>
+                        <p class="cijena">60 KM / dan</p>
+                    </div>
+                </article>
+
+                <article class="car-card ekonomska">
+                    <h4>Chevrolet Aveo Sedan</h4>
+                    <div class="car-image">
+                        <img src="https://img.plc.auction/medium/img3/09/2019/11/612/20f39c2edb27864220b765657b8c4f44/bce3b49870f685ddc403273dee4f7328.jpg" alt="Chevrolet Aveo">
+                    </div>
+                    <div class="car-info">
+                        <ul>
+                            <li><strong>Konjaža:</strong> 100 KS | <strong>Godište:</strong> 2019.</li>
+                            <li><strong>Oprema:</strong> Klima, USB, ABS</li>
+                        </ul>
+                        <p class="cijena">55 KM / dan</p>
+                    </div>
+                </article>
+
+                <h3 class="kategorija-naslov">Srednja Klasa</h3>
+
+                <article class="car-card srednja">
+                    <h4>VW Passat B8 Highline</h4>
+                    <div class="car-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/VW_Passat_B8_Limousine_2.0_TDI_Highline.JPG/1920px-VW_Passat_B8_Limousine_2.0_TDI_Highline.JPG" alt="Passat B8">
+                    </div>
+                    <div class="car-info">
+                        <ul>
+                            <li><strong>Konjaža:</strong> 150 KS | <strong>Godište:</strong> 2020.</li>
+                            <li><strong>Oprema:</strong> ErgoComfort, ACC Tempomat, Matrix LED</li>
+                        </ul>
+                        <p class="cijena">120 KM / dan</p>
+                    </div>
+                </article>
+
+                <article class="car-card srednja">
+                    <h4>Audi A4 S-line</h4>
+                    <div class="car-image">
+                        <img src="https://motorillustrated.com/wp-content/uploads/2018/07/2018-Audi-A4-S-Line-08.jpg" alt="Audi A4">
+                    </div>
+                    <div class="car-info">
+                        <ul>
+                            <li><strong>Konjaža:</strong> 190 KS | <strong>Godište:</strong> 2018.</li>
+                            <li><strong>Oprema:</strong> Virtual Cockpit, Matrix LED, Quattro</li>
+                        </ul>
+                        <p class="cijena">130 KM / dan</p>
+                    </div>
+                </article>
+
+                <article class="car-card srednja">
+                    <h4>Mercedes C220d AMG Line</h4>
+                    <div class="car-image">
+                        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/01/15/13/Mercedes-C220d-AMG-Line-Coupe.jpg?quality=75&width=1250&crop=3%3A2%2Csmart&auto=webp" alt="Mercedes C220d">
+                    </div>
+                    <div class="car-info">
+                        <ul>
+                            <li><strong>Konjaža:</strong> 170 KS | <strong>Godište:</strong> 2016.</li>
+                            <li><strong>Oprema:</strong> AMG Style, Panorama, Burmester zvuk</li>
+                        </ul>
+                        <p class="cijena">110 KM / dan</p>
+                    </div>
+                </article>
+
+                <article class="car-card srednja">
+                    <h4>Mercedes E-Class W213</h4>
+                    <div class="car-image">
+                        <img src="https://www.autozine.org/Archive/Mercedes/old/E_W213_4.jpg" alt="Mercedes E">
+                    </div>
+                    <div class="car-info">
+                        <ul>
+                            <li><strong>Konjaža:</strong> 194 KS | <strong>Godište:</strong> 2021.</li>
+                            <li><strong>Oprema:</strong> Widescreen Cockpit, Zračno ogibljenje</li>
+                        </ul>
+                        <p class="cijena">180 KM / dan</p>
+                    </div>
+                </article>
+
+                <article class="car-card srednja">
+                    <h4>BMW 5 Series G60</h4>
+                    <div class="car-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/BMW_G60_520i_1X7A2443.jpg/960px-BMW_G60_520i_1X7A2443.jpg" alt="BMW 5">
+                    </div>
+                    <div class="car-info">
+                        <ul>
+                            <li><strong>Konjaža:</strong> 197 KS | <strong>Godište:</strong> 2024.</li>
+                            <li><strong>Oprema:</strong> M-Paket, 360 kamera, Harman Kardon</li>
+                        </ul>
+                        <p class="cijena">150 KM / dan</p>
+                    </div>
+                </article>
+
+                <h3 class="kategorija-naslov">Luksuzna Klasa</h3>
+
+                <article class="car-card luksuzna">
+                    <h4>Mercedes-AMG GT 63 S</h4>
+                    <div class="car-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg/960px-Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg" alt="AMG GT 63">
+                    </div>
+                    <div class="car-info">
+                        <ul>
+                            <li><strong>Konjaža:</strong> 639 KS | <strong>Godište:</strong> 2023.</li>
+                            <li><strong>Oprema:</strong> 4Matic+, Drift Mode, Keramičke kočnice</li>
+                        </ul>
+                        <p class="cijena">900 KM / dan</p>
+                    </div>
+                </article>
+
+                <article class="car-card luksuzna">
+                    <h4>Mercedes-AMG G63</h4>
+                    <div class="car-image">
+                        <img src="https://www.topgear.com/sites/default/files/2024/11/1-Mercedes-AMG-G63-review-UK-2024.jpg?w=1784&h=1004" alt="G Class">
+                    </div>
+                    <div class="car-info">
+                        <ul>
+                            <li><strong>Konjaža:</strong> 585 KS | <strong>Godište:</strong> 2024.</li>
+                            <li><strong>Oprema:</strong> Night Paket, V8 BiTurbo, Exclusive Interior</li>
+                        </ul>
+                        <p class="cijena">1100 KM / dan</p>
+                    </div>
+                </article>
+
+                <article class="car-card luksuzna">
+                    <h4>Lamborghini Revuelto</h4>
+                    <div class="car-image">
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/2024-lamborghini-revuelto-lightning-lap-2025-378-67ae462c26ed6.jpg?crop=0.559xw:0.476xh;0.199xw,0.377xh&resize=1200:*" alt="Lamborghini">
+                    </div>
+                    <div class="car-info">
+                        <ul>
+                            <li><strong>Konjaža:</strong> 1015 KS | <strong>Godište:</strong> 2024.</li>
+                            <li><strong>Oprema:</strong> Hybrid V12, Carbon Ceramic, Alcantara</li>
+                        </ul>
+                        <p class="cijena">1500 KM / dan</p>
+                    </div>
+                </article>
+
+                <article class="car-card luksuzna">
+                    <h4>Ferrari 488 Pista</h4>
+                    <div class="car-image">
+                        <img src="https://www.sportscarmarket.com/wp-content/uploads/2023/05/2019-ferrari-488-pista-main.jpg" alt="Ferrari 488 Pista">
+                    </div>
+                    <div class="car-info">
+                        <ul>
+                            <li><strong>Konjaža:</strong> 720 KS | <strong>Godište:</strong> 2020.</li>
+                            <li><strong>Oprema:</strong> Carbon Fiber paket, Telemetrija, JBL Audio</li>
+                        </ul>
+                        <p class="cijena">1200 KM / dan</p>
+                    </div>
+                </article>
+
+                <article class="car-card luksuzna">
+                    <h4>McLaren P1 Hybrid</h4>
+                    <div class="car-image">
+                        <img src="https://cdn-ilelnbe.nitrocdn.com/GFKLWAkpPNGlbaSOlgaEpZsuMxDVwRat/assets/images/optimized/rev-f187d12/www.sportscarmarket.com/wp-content/uploads/2016/09/2014-mclaren-p1-coupe-drivers-front.jpg" alt="McLaren P1">
+                    </div>
+                    <div class="car-info">
+                        <ul>
+                            <li><strong>Konjaža:</strong> 916 KS | <strong>Godište:</strong> 2015.</li>
+                            <li><strong>Oprema:</strong> Race Mode, Aktivni spojler, Karbonska šasija</li>
+                        </ul>
+                        <p class="cijena">2500 KM / dan</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="pravila-sekcija">
+            <h2 class="centriran-naslov">Pravila i Uslovi Najma</h2>
+            <div class="pravila-sadrzaj">
+                <article class="pravilo-box">
+                    <h3>1. Uslovi za Vozače</h3>
+                    <p>Minimalna starost: 21 godina (25 za luksuzna vozila). Potreban važeći staž od minimalno 2 godine.</p>
+                </article>
+                <article class="pravilo-box">
+                    <h3>2. Gorivo i Higijena</h3>
+                    <p>Vozila se preuzimaju i vraćaju sa punim rezervoarom. Strogo zabranjeno pušenje.</p>
+                </article>
+                <article class="pravilo-box">
+                    <h3>3. Osiguranje</h3>
+                    <p>Sva vozila imaju puni Kasko paket. Podrška dostupna 24/7 na cijeloj teritoriji BiH.</p>
+                </article>
+            </div>
+        </section>
+
+        <div class="nazad-vrh">
+            <a href="#top">Vrati se na vrh stranice ↑</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Elite Rent A Car d.o.o.</strong></p>
+            <p>Adresa: Maršala Tita 13, 75000 Tuzla, BiH</p>
+            <p><strong>Odgovorna lica:</strong> Tarik Alić, Fatmir Cvrk, Softić Faris</p>
+            <p>Grupa 35 | Fakultet elektrotehnike Tuzla | 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/tptpskripte.js"></script>
+</body>
+</html>
