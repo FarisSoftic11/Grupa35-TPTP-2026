@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Elite Rent A Car</title>
+    <link rel="stylesheet" href="css/tptpstil.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-box">
+                <img src="images/Screenshot 2026-05-05 180257.png" alt="Elite Rent A Car Logo">
+                <h1>Elite Rent A Car</h1>
+            </div>
+            <nav id="glavni-meni">
+                <ul class="nav-lista">
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="sadrzaj.html">Vozni park</a></li>
+                    <li><a href="sadrzaj.html#pravila-sekcija">Pravila korištenja</a></li>
+                    <li><a href="kontakt.html" class="active">Kontakt</a></li>
+                    <li><a href="https://github.com/FarisSoftic11/Grupa35-TPTP-2026" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="kontakt-forma-sekcija">
+            <div class="container">
+                <h2 class="centriran-naslov">Pošaljite nam upit</h2>
+                <p class="podnaslov">Naš tim će vam odgovoriti u najkraćem mogućem roku.</p>
+                
+                <form id="forma-za-upit">
+                    <div class="form-grupa">
+                        <label for="ime-prezime">Ime i Prezime:</label>
+                        <input type="text" id="ime-prezime" name="ime-prezime" placeholder="Unesite vaše ime..." required>
+                    </div>
+
+                    <div class="form-grupa">
+                        <label for="email-adresa">E-mail adresa:</label>
+                        <input type="email" id="email-adresa" name="email-adresa" placeholder="primjer@mail.com" required>
+                    </div>
+
+                    <div class="form-grupa">
+                        <label for="vrsta-upita">Zanima me:</label>
+                        <select id="vrsta-upita" name="vrsta-upita">
+                            <option value="najam">Najam vozila</option>
+                            <option value="poslovna-saradnja">Poslovna saradnja</option>
+                            <option value="tehnicka-podrska">Tehnička podrška</option>
+                            <option value="ostalo">Ostalo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-grupa">
+                        <label for="poruka">Vaša poruka:</label>
+                        <textarea id="poruka" name="poruka" rows="6" placeholder="Kako vam možemo pomoći?" required></textarea>
+                    </div>
+
+                    <div class="form-akcija">
+                        <button type="submit" id="dugme-posalji" class="glavno-dugme">Pošalji poruku</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <hr class="razdjelnik">
+
+        <section id="odgovorna-lica">
+            <div class="container">
+                <h2 class="centriran-naslov">Naš Ekspertni Tim</h2>
+                <div class="tim-grid">
+                    <article class="clan-tima">
+                        <h3>Tarik Alić</h3>
+                        <p>Tehnički direktor i logistika</p>
+                    </article>
+
+                    <article class="clan-tima">
+                        <h3>Fatmir Cvrk</h3>
+                        <p>Menadžer voznog parka</p>
+                    </article>
+
+                    <article class="clan-tima">
+                        <h3>Softić Faris</h3>
+                        <p>Odnosi s klijentima i razvoj</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="poslovnica-detalji">
+            <div class="container info-panel">
+                <div class="kontakt-info">
+                    <h3>Glavni Ured Tuzla</h3>
+                    <p><strong>📍 Adresa:</strong> Maršala Tita 13, 75000 Tuzla</p>
+                    <p><strong>📞 Telefon:</strong> +387 35 123 456</p>
+                    <p><strong>✉️ E-mail:</strong> info@eliterent.ba</p>
+                    <p><strong>⏰ Radno vrijeme:</strong> Pon-Sub: 08:00 - 20:00h</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="kontakt-podaci">
+        <h2>Kontaktirajte Nas</h2>
+        <div class="info-box">
+            <p><strong>📍 Lokacija:</strong> Maršala Tita 13, 75000 Tuzla </p>
+            <p><strong>📞 Telefon:</strong> +387 35 123 456</p>
+            <p><strong>📧 Email:</strong> info@eliterent.ba</p>
+            <p><strong>⏰ Radno vrijeme:</strong> Pon - Sub: 08:00 - 20:00</p>
+        </div>
+    </section>
+
+    <script src="js/tptpskripte.js"></script>
+</body>
+</html>
