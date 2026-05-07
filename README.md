@@ -1,7 +1,13 @@
-# Grupa35-TPTP-2026
-Projekat  TPTP
-Odgovorni za ovaj projekat:
-1.Faris Softić(GitHub username:FarisSoftic11)
-2.Fatmir Cvrk(GitHub username:)
-3.Tarik Alić(GitHub username:)
-Ukratko,cilj ovog projekta je formiranje web stranice na temu rent a Car uz koristenje alata:Html,css,java.
+# Elite Rent A Car Tuzla
+## O projektu
+Web stranica za iznajmljivanje premium vozila na području Tuzlanskog kantona, fokusirana na korisničko iskustvo i responzivni dizajn.
+
+## Članovi grupe
+| Faris Softić | @FarisSoftic11 | HTML + struktura |
+|   Tarik Alić |  | CSS + dizajn |
+| Fatmir Cvrk |  | JavaScript |
+
+## Tehnologije
+- HTML5
+- CSS3 (bez frameworka)
+- JavaScript (bez biblioteka)
