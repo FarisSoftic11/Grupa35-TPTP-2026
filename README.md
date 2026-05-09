@@ -5,7 +5,7 @@ Web stranica za iznajmljivanje premium vozila na području Tuzlanskog kantona, f
 ## Članovi grupe
 | Faris Softić | @FarisSoftic11 | HTML + struktura |
 |   Tarik Alić |  | CSS + dizajn |
-| Fatmir Cvrk |  | JavaScript |
+| Fatmir Cvrk | FatmirCvrk11 | JavaScript |
 
 ## Tehnologije
 - HTML5
