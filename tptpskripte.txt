@@ -1,0 +1,63 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+    const naslovDobrodoslice = document.querySelector('#o-nama h2');
+    if (naslovDobrodoslice) {
+        const trenutniSat = new Date().getHours();
+        let pozdrav = "Dobrodošli";
+
+        if (trenutniSat >= 5 && trenutniSat < 12) {
+            pozdrav = "Dobro jutro i dobrodošli";
+        } else if (trenutniSat >= 12 && trenutniSat < 18) {
+            pozdrav = "Dobar dan, dobrodošli";
+        } else {
+            pozdrav = "Dobro veče, dobrodošli";
+        }
+
+        naslovDobrodoslice.textContent = `${pozdrav} u Elite Rent A Car`;
+    }
+
+    const glavniHeader = document.querySelector('header');
+    if (glavniHeader) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                glavniHeader.classList.add('header-scrolan');
+            } else {
+                glavniHeader.classList.remove('header-scrolan');
+            }
+        });
+    }
+
+    const pravilaKartice = document.querySelectorAll('.pravila-grid article');
+    if (pravilaKartice.length > 0) {
+        const opcijeObservera = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const prikaziElement = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('prikazan');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, opcijeObservera);
+
+        pravilaKartice.forEach(kartica => {
+            kartica.classList.add('sakriven');
+            prikaziElement.observe(kartica);
+        });
+    }
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const cilj = document.querySelector(this.getAttribute('href'));
+            if (cilj) {
+                cilj.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
