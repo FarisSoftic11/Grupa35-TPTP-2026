@@ -30,87 +30,69 @@
         <section id="kontakt-forma-sekcija">
             <div class="container">
                 <h2 class="centriran-naslov">Pošaljite nam upit</h2>
-                <p class="podnaslov">Naš tim će vam odgovoriti u najkraćem mogućem roku.</p>
                 
-                <form id="forma-za-upit">
-                    <div class="form-grupa">
-                        <label for="ime-prezime">Ime i Prezime:</label>
-                        <input type="text" id="ime-prezime" name="ime-prezime" placeholder="Unesite vaše ime..." required>
+                <div id="uspjeh-kontejner" style="display:none; text-align:center; padding: 20px; background: #d4edda; color: #155724; border-radius: 8px; margin-bottom: 20px;">
+                    <h3 id="uspjeh-tekst"></h3>
+                </div>
+
+                <form id="forma-za-upit" novalidate>
+                    <div class="form-red">
+                        <div class="form-grupa">
+                            <label for="ime">Ime:</label>
+                            <input type="text" id="ime" name="ime" placeholder="Vaše ime">
+                            <span class="error-poruka" id="error-ime"></span>
+                        </div>
+                        <div class="form-grupa">
+                            <label for="prezime">Prezime:</label>
+                            <input type="text" id="prezime" name="prezime" placeholder="Vaše prezime">
+                            <span class="error-poruka" id="error-prezime"></span>
+                        </div>
                     </div>
 
                     <div class="form-grupa">
                         <label for="email-adresa">E-mail adresa:</label>
-                        <input type="email" id="email-adresa" name="email-adresa" placeholder="primjer@mail.com" required>
+                        <input type="email" id="email-adresa" name="email-adresa" placeholder="primjer@mail.com">
+                        <span class="error-poruka" id="error-email"></span>
+                    </div>
+
+                    <div class="form-grupa">
+                        <label for="telefon">Broj telefona:</label>
+                        <input type="text" id="telefon" name="telefon" placeholder="061 123-456">
+                        <span class="error-poruka" id="error-telefon"></span>
                     </div>
 
                     <div class="form-grupa">
                         <label for="vrsta-upita">Zanima me:</label>
                         <select id="vrsta-upita" name="vrsta-upita">
+                            <option value="">Odaberite temu...</option>
                             <option value="najam">Najam vozila</option>
                             <option value="poslovna-saradnja">Poslovna saradnja</option>
                             <option value="tehnicka-podrska">Tehnička podrška</option>
                             <option value="ostalo">Ostalo</option>
                         </select>
+                        <span class="error-poruka" id="error-upit"></span>
                     </div>
 
                     <div class="form-grupa">
                         <label for="poruka">Vaša poruka:</label>
-                        <textarea id="poruka" name="poruka" rows="6" placeholder="Kako vam možemo pomoći?" required></textarea>
+                        <textarea id="poruka" name="poruka" rows="5" placeholder="Kako vam možemo pomoći?"></textarea>
+                        <span class="error-poruka" id="error-poruka-text"></span>
                     </div>
 
                     <div class="form-akcija">
                         <button type="submit" id="dugme-posalji" class="glavno-dugme">Pošalji poruku</button>
+                        <button type="reset" id="dugme-reset" class="reset-dugme">Resetuj formu</button>
                     </div>
                 </form>
             </div>
         </section>
-
-        <hr class="razdjelnik">
-
-        <section id="odgovorna-lica">
-            <div class="container">
-                <h2 class="centriran-naslov">Naš Ekspertni Tim</h2>
-                <div class="tim-grid">
-                    <article class="clan-tima">
-                        <h3>Tarik Alić</h3>
-                        <p>Tehnički direktor i logistika</p>
-                    </article>
-
-                    <article class="clan-tima">
-                        <h3>Fatmir Cvrk</h3>
-                        <p>Menadžer voznog parka</p>
-                    </article>
-
-                    <article class="clan-tima">
-                        <h3>Softić Faris</h3>
-                        <p>Odnosi s klijentima i razvoj</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="poslovnica-detalji">
-            <div class="container info-panel">
-                <div class="kontakt-info">
-                    <h3>Glavni Ured Tuzla</h3>
-                    <p><strong>📍 Adresa:</strong> Maršala Tita 13, 75000 Tuzla</p>
-                    <p><strong>📞 Telefon:</strong> +387 35 123 456</p>
-                    <p><strong>✉️ E-mail:</strong> info@eliterent.ba</p>
-                    <p><strong>⏰ Radno vrijeme:</strong> Pon-Sub: 08:00 - 20:00h</p>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <section class="kontakt-podaci">
-        <h2>Kontaktirajte Nas</h2>
-        <div class="info-box">
-            <p><strong>📍 Lokacija:</strong> Maršala Tita 13, 75000 Tuzla </p>
-            <p><strong>📞 Telefon:</strong> +387 35 123 456</p>
-            <p><strong>📧 Email:</strong> info@eliterent.ba</p>
-            <p><strong>⏰ Radno vrijeme:</strong> Pon - Sub: 08:00 - 20:00</p>
+    <footer>
+        <div class="footer-info" style="text-align: center; padding: 20px;">
+            <p><strong>Elite Rent A Car d.o.o.</strong> | 2026</p>
         </div>
-    </section>
+    </footer>
 
     <script src="js/tptpskripte.js"></script>
 </body>
