@@ -1,0 +1,57 @@
+/* 1. CSS VARIJABLE (:root)
+   Omogućavaju centralizovano upravljanje bojama. Promjenom na jednom mjestu, 
+   boja se mijenja na cijeloj stranici. Ovo olakšava održavanje koda. */
+:root {
+    --primary: #1a73e8;       /* Osnovna plava boja brenda */
+    --primary-dark: #1557b0;
+    --secondary: #ffc107;      /* Akcentna žuta boja */
+    --bg-body: #f8f9fa;        /* Svijetla pozadina */
+    --bg-card: #ffffff;
+    --text-main: #202124;
+    --border: #dadce0;
+    --shadow: 0 4px 12px rgba(0,0,0,0.08);
+    --header-glass: rgba(255, 255, 255, 0.95);
+    --transition: 0.3s ease;   /* Standardna brzina animacija */
+}
+
+/* 2. DARK MODE POSTAVKE
+   Kada se u JavaScriptu tijelu dokumenta doda klasa .dark-mode, 
+   ove varijable prepisuju one iz :root-a. */
+body.dark-mode {
+    --bg-body: #121212;
+    --bg-card: #1e1e1e;
+    --text-main: #e8eaed;
+    --border: #3c4043;
+    --shadow: 0 4px 20px rgba(0,0,0,0.4);
+    --header-glass: rgba(30, 30, 30, 0.95);
+}
+
+/* 3. GLOBALNI RESET
+   Uklanjamo podrazumijevane margine browsera. 
+   box-sizing: border-box osigurava da padding ne kvari širinu elemenata. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+/* Slike činimo responzivnim da se ne prelijevaju izvan ekrana */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
