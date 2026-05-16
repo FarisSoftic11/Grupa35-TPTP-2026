@@ -1,4 +1,4 @@
-/* 1. CSS VARIJABLE (:root)
+/* CSS VARIJABLE (:root)
    Omogućavaju centralizovano upravljanje bojama. Promjenom na jednom mjestu, 
    boja se mijenja na cijeloj stranici. Ovo olakšava održavanje koda. */
 :root {
@@ -14,7 +14,7 @@
     --transition: 0.3s ease;   /* Standardna brzina animacija */
 }
 
-/* 2. DARK MODE POSTAVKE
+/* DARK MODE POSTAVKE
    Kada se u JavaScriptu tijelu dokumenta doda klasa .dark-mode, 
    ove varijable prepisuju one iz :root-a. */
 body.dark-mode {
@@ -26,7 +26,7 @@ body.dark-mode {
     --header-glass: rgba(30, 30, 30, 0.95);
 }
 
-/* 3. GLOBALNI RESET
+/* GLOBALNI RESET
    Uklanjamo podrazumijevane margine browsera. 
    box-sizing: border-box osigurava da padding ne kvari širinu elemenata. */
 * {
@@ -56,7 +56,7 @@ img {
     padding: 0 20px;
 }
 
-/* 4. ZAGLAVLJE (Header)
+/* ZAGLAVLJE (Header)
    Koristimo sticky poziciju da meni uvijek bude vidljiv pri skrolovanju.
    backdrop-filter stvara moderan efekat zamućenja pozadine. */
 header {
@@ -86,7 +86,7 @@ header {
     color: var(--primary);
 }
 
-/* 5. NAVIGACIJA
+/* NAVIGACIJA
    Flexbox omogućava lako vodoravno nizanje elemenata liste. */
 .nav-lista {
     display: flex;
@@ -109,7 +109,7 @@ header {
     color: white;
 }
 
-/* 6. VOZNI PARK (CSS Grid)
+/* VOZNI PARK (CSS Grid)
    grid-template-columns sa repeat(auto-fit...) automatski prilagođava 
    broj kolona veličini ekrana bez potrebe za puno media query-ja. */
 .vozila-grid {
@@ -125,7 +125,7 @@ header {
     color: var(--primary);
 }
 
-/* 7. KARTICE VOZILA
+/* KARTICE VOZILA
    Dizajn sa sjenama i zaobljenim uglovima daje premium izgled stranici. */
 .car-card {
     background: var(--bg-card);
@@ -155,4 +155,69 @@ header {
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
+}
+
+/* PRAVILA I KONTAKT
+   Korištenje Flexboxa za sekciju pravila omogućava fleksibilno slaganje boxova. */
+.pravila-sadrzaj {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.pravilo-box {
+    flex: 1 1 300px;
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid var(--primary);
+    box-shadow: var(--shadow);
+}
+
+/* Stilizacija formi za profesionalan izgled unosa podataka */
+#kontakt-forma-sekcija {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-body);
+}
+
+/* FOOTER
+   Jednostavno podnožje sa tamnom pozadinom radi kontrasta. */
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* MEDIA QUERIES (Responzivnost)
+   Prilagođavamo navigaciju i pravila za male ekrane mobitela. */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-lista {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .pravila-sadrzaj {
+        flex-direction: column;
+    }
 }
