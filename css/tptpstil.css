@@ -55,3 +55,104 @@ img {
     margin: 0 auto;
     padding: 0 20px;
 }
+
+/* 4. ZAGLAVLJE (Header)
+   Koristimo sticky poziciju da meni uvijek bude vidljiv pri skrolovanju.
+   backdrop-filter stvara moderan efekat zamućenja pozadine. */
+header {
+    background: var(--header-glass);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-box h1 {
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+
+/* 5. NAVIGACIJA
+   Flexbox omogućava lako vodoravno nizanje elemenata liste. */
+.nav-lista {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-lista a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+/* Stil za trenutno aktivnu stranicu i efekt pri prelasku mišem */
+.nav-lista a:hover, .nav-lista a.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* 6. VOZNI PARK (CSS Grid)
+   grid-template-columns sa repeat(auto-fit...) automatski prilagođava 
+   broj kolona veličini ekrana bez potrebe za puno media query-ja. */
+.vozila-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.centriran-naslov {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--primary);
+}
+
+/* 7. KARTICE VOZILA
+   Dizajn sa sjenama i zaobljenim uglovima daje premium izgled stranici. */
+.car-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition);
+}
+
+/* Vizuelni feedback: kartica se lagano podigne na hover */
+.car-card:hover {
+    transform: translateY(-8px);
+}
+
+.car-card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.btn-rezervisi {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
