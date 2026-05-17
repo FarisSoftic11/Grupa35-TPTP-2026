@@ -1,22 +1,19 @@
-/* CSS VARIJABLE (:root)
-   Omogućavaju centralizovano upravljanje bojama. Promjenom na jednom mjestu, 
-   boja se mijenja na cijeloj stranici. Ovo olakšava održavanje koda. */
+/* ==========================================================================
+   CSS VARIJABLE (:root) & DARK MODE
+   ========================================================================== */
 :root {
-    --primary: #1a73e8;       /* Osnovna plava boja brenda */
+    --primary: #1a73e8;          /* Osnovna plava boja brenda */
     --primary-dark: #1557b0;
-    --secondary: #ffc107;      /* Akcentna žuta boja */
-    --bg-body: #f8f9fa;        /* Svijetla pozadina */
+    --secondary: #ffc107;         /* Akcentna žuta boja */
+    --bg-body: #f8f9fa;           /* Svijetla pozadina */
     --bg-card: #ffffff;
     --text-main: #202124;
     --border: #dadce0;
     --shadow: 0 4px 12px rgba(0,0,0,0.08);
     --header-glass: rgba(255, 255, 255, 0.95);
-    --transition: 0.3s ease;   /* Standardna brzina animacija */
+    --transition: 0.3s ease;      /* Standardna brzina animacija */
 }
 
-/* DARK MODE POSTAVKE
-   Kada se u JavaScriptu tijelu dokumenta doda klasa .dark-mode, 
-   ove varijable prepisuju one iz :root-a. */
 body.dark-mode {
     --bg-body: #121212;
     --bg-card: #1e1e1e;
@@ -26,9 +23,9 @@ body.dark-mode {
     --header-glass: rgba(30, 30, 30, 0.95);
 }
 
-/* GLOBALNI RESET
-   Uklanjamo podrazumijevane margine browsera. 
-   box-sizing: border-box osigurava da padding ne kvari širinu elemenata. */
+/* ==========================================================================
+   GLOBALNI RESET I OSNOVNI STILOVE
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -43,7 +40,6 @@ body {
     transition: background-color var(--transition), color var(--transition);
 }
 
-/* Slike činimo responzivnim da se ne prelijevaju izvan ekrana */
 img {
     max-width: 100%;
     height: auto;
@@ -56,9 +52,9 @@ img {
     padding: 0 20px;
 }
 
-/* ZAGLAVLJE (Header)
-   Koristimo sticky poziciju da meni uvijek bude vidljiv pri skrolovanju.
-   backdrop-filter stvara moderan efekat zamućenja pozadine. */
+/* ==========================================================================
+   ZAGLAVLJE (Header) & NAVIGACIJA
+   ========================================================================== */
 header {
     background: var(--header-glass);
     backdrop-filter: blur(10px);
@@ -71,10 +67,10 @@ header {
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
 }
 
 .logo-box {
@@ -83,7 +79,7 @@ header {
     gap: 12px;
 }
 
-.logo-box img{
+.logo-box img {
     width: 70px;
     height: 70px;
     object-fit: contain;
@@ -95,8 +91,6 @@ header {
     color: var(--primary);
 }
 
-/* NAVIGACIJA
-   Flexbox omogućava lako vodoravno nizanje elemenata liste. */
 .nav-lista {
     display: flex;
     list-style: none;
@@ -112,33 +106,33 @@ header {
     transition: var(--transition);
 }
 
-/* Stil za trenutno aktivnu stranicu i efekt pri prelasku mišem */
-.nav-lista a:hover, .nav-lista a.active {
+.nav-lista a:hover, 
+.nav-lista a.active {
     background: var(--primary);
     color: white;
 }
 
-/* VOZNI PARK (CSS Grid)
-   grid-template-columns sa repeat(auto-fit...) automatski prilagođava 
-   broj kolona veličini ekrana bez potrebe za puno media query-ja. */
-.katalog-sekcija{
+/* ==========================================================================
+   VOZNI PARK (Katalog & Grid)
+   ========================================================================== */
+.katalog-sekcija {
     max-width: 1300px;
     margin: 0 auto;
     padding: 40px 20px;
-
-}
-
-   .vozila-grid, .vozila.lista {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    padding: 40px 0;
 }
 
 .centriran-naslov {
     text-align: center;
     margin: 40px 0;
     color: var(--primary);
+}
+
+.vozila-lista, 
+.vozila-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
 }
 
 .kategorija-naslov {
@@ -150,24 +144,24 @@ header {
     padding-bottom: 10px;
 }
 
-
-/* KARTICE VOZILA
-   Dizajn sa sjenama i zaobljenim uglovima daje premium izgled stranici. */
+/* ==========================================================================
+   KARTICE AUTA (Car Cards)
+   ========================================================================== */
 .car-card {
     display: flex;
     flex-direction: column;
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: 18px;
+    border-radius: 18px; 
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: transform var(--transition);
 }
 
-/* Vizuelni feedback: kartica se lagano podigne na hover */
 .car-card:hover {
     transform: translateY(-8px);
 }
+
 .car-card h4 {
     padding: 18px;
     font-size: 1.3rem;
@@ -208,7 +202,6 @@ header {
     margin-bottom: 10px;
 }
 
-
 .car-card-body {
     padding: 20px;
     text-align: center;
@@ -238,7 +231,9 @@ header {
     background: var(--primary-dark);
 }
 
-   /* FILTER DUGMAD */
+/* ==========================================================================
+   FILTER DUGMAD
+   ========================================================================== */
 .filter-kontrole {
     display: flex;
     justify-content: center;
@@ -263,8 +258,9 @@ header {
     transform: translateY(-2px);
 }
 
-/* PRAVILA I KONTAKT
-   Korištenje Flexboxa za sekciju pravila omogućava fleksibilno slaganje boxova. */
+/* ==========================================================================
+   PRAVILA I USLOVI
+   ========================================================================== */
 .pravila-sadrzaj {
     display: flex;
     gap: 20px;
@@ -281,7 +277,9 @@ header {
     box-shadow: var(--shadow);
 }
 
-/* Stilizacija formi za profesionalan izgled unosa podataka */
+/* ==========================================================================
+   FORME I INPUTI (Kontakt & Rezervacija)
+   ========================================================================== */
 #kontakt-forma-sekcija {
     background: var(--bg-card);
     padding: 30px;
@@ -302,8 +300,10 @@ header {
 }
 
 .form-grupa input,
-.form-grupa textarea,.form-grupa select, 
-.form-group input, .form-group textarea {
+.form-grupa textarea,
+.form-grupa select,
+.form-group input, 
+.form-group textarea {
     width: 100%;
     padding: 12px;
     margin-top: 8px;
@@ -356,8 +356,9 @@ header {
     transform: translateY(-2px);
 }
 
-/* FOOTER
-   Jednostavno podnožje sa tamnom pozadinom radi kontrasta. */
+/* ==========================================================================
+   FOOTER & NAZAD NA VRH
+   ========================================================================== */
 .nazad-vrh {
     text-align: center;
     margin-top: 40px;
@@ -376,7 +377,7 @@ header {
     background: var(--primary-dark);
 }
 
-   footer {
+footer {
     background: #1a1a1a;
     color: white;
     padding: 40px 0;
@@ -384,19 +385,20 @@ header {
     margin-top: 50px;
 }
 
-/* MEDIA QUERIES (Responzivnost)
-   Prilagođavamo navigaciju i pravila za male ekrane mobitela. */
+/* ==========================================================================
+   RESPONSIVE (Media Queries)
+   ========================================================================== */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .nav-lista {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .logo-box h1 {
         font-size: 1.1rem;
     }
@@ -423,28 +425,20 @@ header {
     .form-akcija {
         flex-direction: column;
     }
-
-    .katalog-layout {
-        flex-direction: column; /* Slaže elemente vertikalno */
-    }
-
-    .filter-sidebar {
-        flex: none;
-        width: 100%;
-        position: static; /* Isključuje praćenje skrolovanja na mobitelu */
-    }
 }
 
-/*STILOVI ZA REZERVACIJSKI MODAL (Skočni prozor) */
+/* ==========================================================================
+   NOVO: STILOVI ZA REZERVACIJSKI MODAL (Skočni prozor)
+   ========================================================================== */
 .modal {
-    display: none;
+    display: none; 
     position: fixed;
     z-index: 2000; /* Iznad fiksnog headera */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6); 
     backdrop-filter: blur(5px);
 }
 
