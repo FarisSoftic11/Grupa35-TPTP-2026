@@ -11,13 +11,13 @@
     <header>
         <div class="header-container">
             <div class="logo-box">
-                <img src="C:\Users\korisnik1\Pictures\Screenshots\Screenshot 2026-05-05 173346.png">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4ILBJS1DezZztDrqTsZK33ef9iPwFSbWRQ&s">
                 <h1>Elite Rent A Car</h1>
             </div>
             
             <nav id="glavni-meni">
                 <ul class="nav-lista">
-                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="index.html" class="active">Početna</a></li>
                     <li><a href="sadrzaj.html">Vozni park</a></li>
                     <li><a href="#pravila-koristenja">Pravila korištenja</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
@@ -28,53 +28,51 @@
     </header>
 
     <main>
-        <section id="o-nama">
-            <article class="container">
+        <section id="o-nama" class="hero-sekcija">
+            <div class="container hero-sadrzaj">
                 <h2>Dobrodošli u Elite Rent A Car</h2>
                 <p>Premium agencija za najam vozila u Tuzli. Pružamo vrhunsku uslugu uz maksimalnu sigurnost.</p>
                 <div class="akcija-link">
-                    <a href="sadrzaj.html" class="dugme">Istražite ponudu</a>
-                </div>
-            </article>
-        </section>
-
-        <section id="pravila-koristenja">
-            <div class="container">
-                <h2>Pravila Korištenja</h2>
-                <div class="pravila-grid">
-                    <article>
-                        <h3>Uslovi za vozače</h3>
-                        <p>Minimalna starost 21 godina (25 za luksuznu klasu). Potrebna važeća dozvola (min. 2 godine).</p>
-                    </article>
-                    <article>
-                        <h3>Gorivo</h3>
-                        <p>Vozila se preuzimaju i vraćaju sa punim rezervoarom goriva.</p>
-                    </article>
-                    <article>
-                        <h3>Zabrane</h3>
-                        <p>Pušenje i konzumacija hrane su strogo zabranjeni u svim vozilima.</p>
-                    </article>
+                    <a href="sadrzaj.html" class="glavno-dugme" style="text-decoration: none; display: inline-block;">Istražite ponudu</a>
                 </div>
             </div>
         </section>
 
-        <section id="lokacija-info">
-            <div class="container">
-                <h3>Kontakt i Lokacija</h3>
-                <address>
-                    Maršala Tita 13, 75000 Tuzla<br>
+        <section id="pravila-koristenja" class="container">
+            <h2 class="centriran-naslov">Pravila Korištenja</h2>
+            <div class="pravila-sadrzaj">
+                <div class="pravilo-box">
+                    <h3>Uslovi za vozače</h3>
+                    <p>Minimalna starost 21 godina (25 za luksuznu klasu). Potrebna važeća dozvola (min. 2 godine).</p>
+                </div>
+                <div class="pravilo-box">
+                    <h3>Gorivo</h3>
+                    <p>Vozila se preuzimaju i vraćaju sa punim rezervoarom goriva.</p>
+                </div>
+                <div class="pravilo-box">
+                    <h3>Zabrane</h3>
+                    <p>Pušenje i konzumacija hrane su strogo zabranjeni u svim vozilima.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="lokacija-info" class="container">
+            <h3 class="centriran-naslov" style="font-size: 1.8rem;">Kontakt i Lokacija</h3>
+            <div style="text-align: center; margin-bottom: 25px;">
+                <address style="font-style: normal; font-size: 1.1rem;">
+                    <strong>Maršala Tita 13, 75000 Tuzla</strong><br>
                     Tel: +387 35 123 456 | Email: info@eliterent.ba
                 </address>
-                <div class="mapa-okvir">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2869.255393132646!2d18.6738923!3d44.5398282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ead09890f8923%3A0x6745175929121a8c!2zTWFyxFhbGEgVGl0YSAxMywgVHV6bGE!5e0!3m2!1sbs!2sba!4v1715100000000!5m2!1sbs!2sba" 
-                        width="100%" 
-                        height="300" 
-                        style="border:1px solid #ddd;" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
-                </div>
+            </div>
+            <div class="mapa-okvir" style="margin-bottom: 50px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2869.255393132646!2d18.6738923!3d44.5398282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ead09890f8923%3A0x6745175929121a8c!2zTWFyxFhbGEgVGl0YSAxMywgVHV6bGE!5e0!3m2!1sbs!2sba!4v1715100000000!5m2!1sbs!2sba" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
             </div>
         </section>
     </main>
@@ -82,9 +80,12 @@
     <footer>
         <div class="footer-info">
             <p><strong>Elite Rent A Car d.o.o.</strong></p>
-            <p>Adresa: Maršala Tita 13, 75000 Tuzla, BiH</p> <p><strong>Odgovorna lica:</strong> Tarik Alić, Fatmir Cvrk, Softić Faris</p>
+            <p>Adresa: Maršala Tita 13, 75000 Tuzla, BiH</p> 
+            <p><strong>Odgovorna lica:</strong> Tarik Alić, Fatmir Cvrk, Softić Faris</p>
             <p>Grupa 35 | Fakultet elektrotehnike Tuzla | 2026</p>
         </div>
-    </footer> <script src="js/tptpskripte.js"></script>
+    </footer> 
+    
+    <script src="js/tptpskripte.js"></script>
 </body>
 </html>
