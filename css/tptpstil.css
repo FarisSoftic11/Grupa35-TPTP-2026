@@ -69,16 +69,25 @@ header {
 }
 
 .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 20px;
 }
 
 .logo-box {
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+.logo-box img{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 12px;
 }
 
 .logo-box h1 {
@@ -112,9 +121,16 @@ header {
 /* VOZNI PARK (CSS Grid)
    grid-template-columns sa repeat(auto-fit...) automatski prilagođava 
    broj kolona veličini ekrana bez potrebe za puno media query-ja. */
-.vozila-grid {
+.katalog-selekcija{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+}
+
+   .vozila-grid, .vozila.lista {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     padding: 40px 0;
 }
@@ -125,12 +141,24 @@ header {
     color: var(--primary);
 }
 
+.kategorija-naslov {
+    grid-column: 1 / -1;
+    margin-top: 30px;
+    color: var(--primary);
+    font-size: 2rem;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 10px;
+}
+
+
 /* KARTICE VOZILA
    Dizajn sa sjenama i zaobljenim uglovima daje premium izgled stranici. */
 .car-card {
+    display: flex;
+    flex-direction: column;
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: 15px;
+    border-radius: 18px;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: transform var(--transition);
@@ -140,10 +168,58 @@ header {
 .car-card:hover {
     transform: translateY(-8px);
 }
+.car-card h4 {
+    padding: 18px;
+    font-size: 1.3rem;
+    text-align: center;
+    color: var(--primary);
+}
+
+.car-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.car-card:hover .car-image img {
+    transform: scale(1.05);
+}
+
+.car-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.car-info ul {
+    list-style: none;
+}
+
+.car-info li {
+    margin-bottom: 10px;
+}
+
 
 .car-card-body {
     padding: 20px;
     text-align: center;
+}
+
+.cijena {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 .btn-rezervisi {
@@ -155,6 +231,36 @@ header {
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
+    transition: var(--transition);
+}
+
+.btn-rezervisi:hover {
+    background: var(--primary-dark);
+}
+
+   /* FILTER DUGMAD */
+.filter-kontrole {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-kontrole button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-kontrole button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
 }
 
 /* PRAVILA I KONTAKT
@@ -185,13 +291,69 @@ header {
     margin: 40px auto;
 }
 
+.form-grupa {
+    margin-bottom: 20px;
+}
+
+.form-grupa label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-grupa input,
+.form-grupa textarea,.form-grupa select, 
 .form-group input, .form-group textarea {
     width: 100%;
     padding: 12px;
     margin-top: 8px;
+    border-radius: 10px;
     border: 1px solid var(--border);
-    border-radius: 8px;
     background: var(--bg-body);
+    color: var(--text-main);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-red {
+    display: flex;
+    gap: 20px;
+}
+
+.form-red .form-grupa {
+    flex: 1;
+}
+
+.form-akcija {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.glavno-dugme,
+.reset-dugme {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.glavno-dugme {
+    background: var(--primary);
+    color: white;
+}
+
+.reset-dugme {
+    background: #dc3545;
+    color: white;
+}
+
+.glavno-dugme:hover,
+.reset-dugme:hover {
+    transform: translateY(-2px);
 }
 
 /* FOOTER
@@ -203,6 +365,25 @@ footer {
     text-align: center;
     margin-top: 50px;
 }
+
+.nazad-vrh {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.nazad-vrh a {
+    text-decoration: none;
+    color: white;
+    background: var(--primary);
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.nazad-vrh a:hover {
+    background: var(--primary-dark);
+}
+
 
 /* MEDIA QUERIES (Responzivnost)
    Prilagođavamo navigaciju i pravila za male ekrane mobitela. */
@@ -220,4 +401,143 @@ footer {
     .pravila-sadrzaj {
         flex-direction: column;
     }
+
+     .katalog-layout {
+        flex-direction: column; /* Slaže elemente vertikalno */
+    }
+    .filter-sidebar {
+        flex: none;
+        width: 100%;
+        position: static; /* Isključuje praćenje skrolovanja na mobitelu */
+    }
+}
+
+/* Kartica automobila: Ključna izmjena za širinu!
+   Sada kartica više ne može divljati i širiti se preko cijelog ekrana. */
+.car-card {
+    width: 100%;
+    max-width: 500px;               /* Ovdje zaključavamo širinu! Kartica će izgledati savršeno */
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+/* Stil za slike unutar ovako centriranih kartica */
+.car-card img {
+    width: 100%;
+    height: 240px;                  /* Blago povećana visina koja savršeno odgovara širini od 500px */
+    object-fit: cover;              /* Slika zadržava proporcije i ne razvlači se */
+    object-position: center;
+    border-bottom: 1px solid var(--border);
+    transition: transform var(--transition);
+}
+
+/* Dodatni efekat: Kada pređeš mišem, kartica se podigne i dobije jaču sjenu */
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+/* Glavni kontejner koji drži meni i automobile postavlja se u Flexbox */
+.katalog-layout {
+    display: flex;
+    gap: 30px;            /* Razmak između menija i automobila */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* LIJEVI MENI (Sidebar za filtriranje) */
+.filter-sidebar {
+    flex: 0 0 260px;      /* Fiksna širina menija (ne može se skupljati ni širiti) */
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    height: fit-content;  /* Visina se prilagođava broju dugmadi */
+    position: sticky;     /* Meni ostaje fiksiran pri skrolovanju */
+    top: 90px;            /* Drži distancu od glavnog headera na vrhu */
+}
+
+/* Stilizacija dugmadi unutar lijevog menija da izgledaju kao na slici */
+.filter-sidebar button {
+    display: block;       /* Svako dugme ide u novi red */
+    width: 100%;          /* Šire se preko cijelog menija */
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background: var(--bg-body);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;     /* Tekst poravnat ulijevo kao na tvojoj slici */
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+/* Efekat kada je dugme aktivno ili kada pređemo mišem */
+.filter-sidebar button:hover, 
+.filter-sidebar button.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    padding-left: 20px;   /* Efekat blagog pomjeranja teksta udesno na hover */
+}
+
+/* Desna strana: Mijenjamo Grid u Flexbox sa vertikalnim smjerom (column).
+   Ovo slaže automobile jedan ispod drugog i centrira ih u desnom dijelu ekrana. */
+.vozila-grid {
+    flex: 1;                        /* Zauzima sav preostali prostor desno od menija */
+    display: flex;
+    flex-direction: column;         /* Slaže kartice vertikalno */
+    align-items: center;            /* Šalje i centrira automobile tačno u sredinu desne strane */
+    gap: 35px;                      /* Pravi prelijep razmak između automobila */
+    padding: 0;
+}
+/* ====================================================================
+   COMMIT 12: CENTRIRANA MREŽA AUTOMOBILA (PREMA SKICI)
+   ==================================================================== */
+
+/* 1. Glavni kontejner kataloga
+   Centriramo ga na ekranu tako da lijeva i desna margina budu potpuno jednake. */
+.katalog-layout {
+    max-width: 1200px;
+    margin: 0 auto;          /* Ključno pravilo: automatski pravi ISTI razmak lijevo i desno */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;  /* Slaže naslov/meni i automobile vertikalno */
+    gap: 30px;
+}
+
+/* 2. Mreža u kojoj se nalaze automobili (Crveni pravougaonici sa tvoje skice)
+   Ovdje koristimo moćni CSS Grid sa pametnim centriranjem. */
+
+
+/* 3. Pojedinačna kartica automobila (Crveni pravougaonik) */
+.car-card {
+    width: 100%;             /* Savršeno se uklapa u širinu od 350px koju diktira grid */
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+/* 4. Slike unutar kartica
+   Prilagođavamo visinu slici kako bi pravougaonik izgledao skladno i ujednačeno. */
+.car-card img {
+    width: 100%;
+    height: 220px;           /* Idealna visina za širinu od 350px */
+    object-fit: cover;       /* Slika se ne deformiše, zadržava prirodan izgled */
+    object-position: center;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Efekat na prelazu miša (hover) */
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
